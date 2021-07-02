@@ -46,9 +46,10 @@ libc_ifunc (__libc_memset,
 	     && hwcap & PPC_FEATURE_HAS_VSX)
 	    ? __memset_power10 :
 # endif
-            (hwcap2 & PPC_FEATURE2_ARCH_2_07)
+            (hwcap2 & PPC_FEATURE2_ARCH_2_07
+	     && hwcap & PPC_FEATURE_HAS_ALTIVEC)
             ? __memset_power8 :
-	      (hwcap & PPC_FEATURE_HAS_VSX)
+	      (hwcap & PPC_FEATURE_ARCH_2_06)
 	      ? __memset_power7 :
 		(hwcap & PPC_FEATURE_ARCH_2_05)
 		? __memset_power6 :
