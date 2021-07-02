@@ -1,5 +1,4 @@
-/* Multiple versions of strcspn. PowerPC64 version.
-   Copyright (C) 2016-2021 Free Software Foundation, Inc.
+/* Copyright (C) 2021 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -16,22 +15,4 @@
    License along with the GNU C Library; if not, see
    <https://www.gnu.org/licenses/>.  */
 
-#if IS_IN (libc)
-#include <string.h>
-#include <shlib-compat.h>
-#include "init-arch.h"
-
-#undef strcspn
-extern __typeof (strcspn) __libc_strcspn;
-
-extern __typeof (strcspn) __strcspn_ppc attribute_hidden;
-extern __typeof (strcspn) __strcspn_power8 attribute_hidden;
-
-libc_ifunc (__libc_strcspn,
-	    (hwcap2 & PPC_FEATURE2_ARCH_2_07)
-	    ? __strcspn_power8
-	    : __strcspn_ppc);
-
-weak_alias (__libc_strcspn, strcspn)
-libc_hidden_builtin_def (strcspn)
-#endif
+#include <string/strcspn.c>
