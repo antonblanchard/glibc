@@ -85,33 +85,33 @@ endif
 #
 ifeq ($(do_f128_multiarch),yes)
 
-f128-ifunc-calls = s_modff128 s_scalbnf128 s_frexpf128 s_ldexpf128
-gen-libm-f128-ifunc-routines = \
-	e_acosf128 e_acoshf128 e_asinf128 e_atan2f128 e_atanhf128 e_coshf128 \
-	e_expf128 e_fmodf128 e_hypotf128 e_j0f128 e_j1f128 e_jnf128 \
-	e_lgammaf128_r e_logf128 e_log10f128 e_powf128 e_remainderf128 \
-	e_sinhf128 e_sqrtf128 e_gammaf128_r e_ilogbf128 k_tanf128 s_asinhf128 \
-	s_atanf128 s_cbrtf128 s_ceilf128 s_cosf128 s_erff128 s_expm1f128 \
-	s_fabsf128 s_floorf128 s_log1pf128 s_logbf128 \
-	s_rintf128 s_scalblnf128 s_sinf128 s_tanf128 \
-	s_tanhf128 s_truncf128 s_remquof128 e_log2f128 \
-	s_roundf128 s_nearbyintf128 s_sincosf128 s_fmaf128 s_lrintf128 \
-	s_llrintf128 s_lroundf128 s_llroundf128 e_exp10f128 \
-	$(f128-ifunc-calls) $(f128-ifunc-calls:s_%=m_%) x2y2m1f128 \
-	gamma_productf128 lgamma_negf128 lgamma_productf128 s_roundevenf128 \
-	cargf128 conjf128 cimagf128 crealf128 cabsf128 e_scalbf128 s_cacosf128 \
-	s_cacoshf128 s_ccosf128 s_ccoshf128 s_casinf128 s_csinf128 \
-	s_casinhf128 k_casinhf128 s_csinhf128 k_casinhf128 s_csinhf128 \
-	s_catanhf128 s_catanf128 s_ctanf128 s_ctanhf128 s_cexpf128 s_clogf128 \
-	s_cprojf128 s_csqrtf128 s_cpowf128 s_clog10f128 s_fdimf128 \
-	s_fmaxf128 s_fminf128 w_ilogbf128 w_llogbf128 \
-	w_log1pf128 w_scalblnf128 w_acosf128 \
-	w_acoshf128 w_asinf128 w_atan2f128 w_atanhf128 w_coshf128 w_exp10f128 \
-	w_exp2f128 w_fmodf128 w_hypotf128 w_j0f128 w_j1f128 w_jnf128 \
-	w_logf128 w_log10f128 w_log2f128 w_powf128 w_remainderf128 \
-	w_scalbf128 w_sinhf128 w_sqrtf128 w_tgammaf128 w_lgammaf128 \
-	w_lgammaf128_r w_expf128 e_exp2f128 \
-	k_sinf128 k_cosf128 k_sincosf128 e_rem_pio2f128
+#f128-ifunc-calls = s_modff128 s_scalbnf128 s_frexpf128 s_ldexpf128
+#gen-libm-f128-ifunc-routines = \
+#	e_acosf128 e_acoshf128 e_asinf128 e_atan2f128 e_atanhf128 e_coshf128 \
+	#e_expf128 e_fmodf128 e_hypotf128 e_j0f128 e_j1f128 e_jnf128 \
+	#e_lgammaf128_r e_logf128 e_log10f128 e_powf128 e_remainderf128 \
+	#e_sinhf128 e_sqrtf128 e_gammaf128_r e_ilogbf128 k_tanf128 s_asinhf128 \
+	#s_atanf128 s_cbrtf128 s_ceilf128 s_cosf128 s_erff128 s_expm1f128 \
+	#s_fabsf128 s_floorf128 s_log1pf128 s_logbf128 \
+	#s_rintf128 s_scalblnf128 s_sinf128 s_tanf128 \
+	#s_tanhf128 s_truncf128 s_remquof128 e_log2f128 \
+	#s_roundf128 s_nearbyintf128 s_sincosf128 s_fmaf128 s_lrintf128 \
+	#s_llrintf128 s_lroundf128 s_llroundf128 e_exp10f128 \
+	#$(f128-ifunc-calls) $(f128-ifunc-calls:s_%=m_%) x2y2m1f128 \
+	#gamma_productf128 lgamma_negf128 lgamma_productf128 s_roundevenf128 \
+	#cargf128 conjf128 cimagf128 crealf128 cabsf128 e_scalbf128 s_cacosf128 \
+	#s_cacoshf128 s_ccosf128 s_ccoshf128 s_casinf128 s_csinf128 \
+	#s_casinhf128 k_casinhf128 s_csinhf128 k_casinhf128 s_csinhf128 \
+	#s_catanhf128 s_catanf128 s_ctanf128 s_ctanhf128 s_cexpf128 s_clogf128 \
+	#s_cprojf128 s_csqrtf128 s_cpowf128 s_clog10f128 s_fdimf128 \
+	#s_fmaxf128 s_fminf128 w_ilogbf128 w_llogbf128 \
+	#w_log1pf128 w_scalblnf128 w_acosf128 \
+	#w_acoshf128 w_asinf128 w_atan2f128 w_atanhf128 w_coshf128 w_exp10f128 \
+	#w_exp2f128 w_fmodf128 w_hypotf128 w_j0f128 w_j1f128 w_jnf128 \
+	#w_logf128 w_log10f128 w_log2f128 w_powf128 w_remainderf128 \
+	#w_scalbf128 w_sinhf128 w_sqrtf128 w_tgammaf128 w_lgammaf128 \
+	#w_lgammaf128_r w_expf128 e_exp2f128 \
+	#k_sinf128 k_cosf128 k_sincosf128 e_rem_pio2f128
 
 
 f128-march-routines-p9 = $(addsuffix -power9,$(gen-libm-f128-ifunc-routines))

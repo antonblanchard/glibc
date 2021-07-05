@@ -140,13 +140,13 @@ CFLAGS-tst-wcstod-nan-sign.c += $(type-float128-CFLAGS)
 # Makefiles (e.g.: wcsmbs/Makefile) override CFLAGS defined by the Makefiles in
 # sysdeps.  This is avoided with the use sysdep-CFLAGS instead of CFLAGS.
 sysdep-CFLAGS += $(sysdep-CFLAGS-$(<F))
-sysdep-CFLAGS-fpioconst.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-strtod_l.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-strtof_l.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-strtold_l.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-wcstod_l.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-wcstof_l.c += $(type-float128-CFLAGS)
-sysdep-CFLAGS-wcstold_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-fpioconst.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-strtod_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-strtof_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-strtold_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-wcstod_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-wcstof_l.c += $(type-float128-CFLAGS)
+#sysdep-CFLAGS-wcstold_l.c += $(type-float128-CFLAGS)
 
 # Build any ibm128 specific stdlib tests with ibm128 ABI.
 $(foreach suf,$(all-object-suffixes),%128ibm$(suf)): CFLAGS += $(type-ldouble-CFLAGS)
@@ -154,9 +154,9 @@ endif
 
 # Append flags to printf routines.
 ifeq ($(subdir),stdio-common)
-CFLAGS-printf_fp.c = $(type-float128-CFLAGS)
-CFLAGS-printf_fphex.c = $(type-float128-CFLAGS)
-CFLAGS-printf_size.c = $(type-float128-CFLAGS)
+#CFLAGS-printf_fp.c = $(type-float128-CFLAGS)
+#CFLAGS-printf_fphex.c = $(type-float128-CFLAGS)
+#CFLAGS-printf_size.c = $(type-float128-CFLAGS)
 endif
 
 # Disable linker noise on files using ieee128 long double internally
